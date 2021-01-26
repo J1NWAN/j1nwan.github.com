@@ -16,13 +16,13 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 
 # Site Settings
 locale                   : "ko-KR" # 언어
-title                    : "JAVA Blog" # Meta 태그에 들어가는 영역 , 작성하지 않으면 기본값으로 출력됨
+title                    : ":cRon" # Meta 태그에 들어가는 영역 , 작성하지 않으면 기본값으로 출력됨
 title_separator          : "-"
-subtitle                 : # site tagline that appears below site title in masthead
+subtitle                 : "Version 1.0" # site tagline that appears below site title in masthead
 name                     : "진완" # 이름
 description              : "개발자 준비생 다양한 Sever등 다양한 개발을 공부하는 블로그" # Meta 태그에 들어가는 영역
 url                      : "https://j1nwan.github.io/" # GitBlog 호스트 주소 the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
-baseurl                  : "/blog" # the subpath of your site, e.g. "/blog"
+baseurl                  : #"/blog" # the subpath of your site, e.g. "/blog"
 repository               : "J1NWAN/j1nwan.github.com" # Github 레퍼지토리 경로 GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : # 홈페이지 기본 티저(이미지) path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : # 타이틀 옆에 작게 들어갈 이미지. path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
