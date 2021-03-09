@@ -5,7 +5,7 @@ excerpt: "Information processing"
 categories:
     - Information processing
 tags:
-    - Information processing
+    - JAVA
 last_modified_at: 2021-03-04T00:09:00-05:00
 ---
 
