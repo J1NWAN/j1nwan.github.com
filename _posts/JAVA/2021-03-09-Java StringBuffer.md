@@ -3,9 +3,9 @@ title: "Java StringBuffer"
 excerpt: "Information processing"
 
 categories:
-    - Information processing
-tags:
     - JAVA
+tags:
+    - JAVA, String
 last_modified_at: 2021-03-09T00:09:00-05:00
 ---
 

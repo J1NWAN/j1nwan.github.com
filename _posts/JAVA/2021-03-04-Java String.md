@@ -3,9 +3,9 @@ title: "Java String(문자열)"
 excerpt: "Information processing"
 
 categories:
-    - Information processing
-tags:
     - JAVA
+tags:
+    - JAVA, String
 last_modified_at: 2021-03-04T00:09:00-05:00
 ---
 
