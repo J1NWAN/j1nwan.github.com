@@ -17,7 +17,6 @@ StringBuffer는 문자열을 추가하거나 변경 할 때 주로 사용하는 
 <br>
 
 ## [ append ]
----
 > StringBuffer 자료형은 append 라는 메소드를 이용하여 계속해서 문자열을 추가해 나갈 수 있다.
 >그리고 toString() 메소드를 이용하면 String 자료형으로 변경할 수 있다.
 
@@ -61,7 +60,6 @@ System.out.println(temp); // hello java
 <br>
 
 ## [ insert ]
----
 > insert 메소드는 특정 위치에 원하는 문자열을 삽입할 수 있다.
 
 ``` java
@@ -77,7 +75,6 @@ insert는 insert(삽입위치, 삽입 할 내용) 이다.
 <br>
 
 ## [ substring ]
----
 > substirng 메소드는 String 자료형의 substring 메소드와 사용법이 동일하다.
 
 ``` java
