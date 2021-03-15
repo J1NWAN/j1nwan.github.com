@@ -107,7 +107,7 @@ public class practice_String {
   * practice_String student = new practice_String() : practice_String 클래스의 student 객체를 생성
   * student.setName("body") : student 객체의 name에 boby 적용
   * System.out.println(student.name) : student 객체의 name값 출력
-<br>
+<br><br>
 
 여기서 중요한것은 **"this.name"** 부분이다.<br>
 현재 객체가 하나밖에 없어서 this 는 student 객체를 지칭하게된다.<br>
