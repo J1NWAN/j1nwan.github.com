@@ -6,7 +6,7 @@ categories:
     - JAVA
 tags:
     - JAVA, Ingeritance
-last_modified_at: 2021-03-15T00:09:00-05:00
+last_modified_at: '2021-03-15 21:00:00 +0800'
 ---
 
 # 상속 (Ingeritance)

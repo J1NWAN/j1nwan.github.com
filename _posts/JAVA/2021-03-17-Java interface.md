@@ -6,7 +6,7 @@ categories:
     - JAVA
 tags:
     - JAVA, Interface
-last_modified_at: 2021-03-17T00:09:00-05:00
+last_modified_at: '2021-03-17 21:30:00 +0800'
 ---
 
 # 인터페이스
@@ -110,8 +110,8 @@ public interface Predator {
 	public String getFood();
 }
 ```
-여기서 이상한점이 있을 것이다.<br>
-메소드에 몸동이 없다.<br>
+여기서 이상한점이 있을 것이다 메소드에 몸동이 없다.<br>
+
 * 인터페이스의 메소드는 메소드의 이름과 입출력에 대한 정의만 있고 내용은 없다.
 * 몸통 부분은 Implements한 클래스들이 구현해야 한다.<br>
 

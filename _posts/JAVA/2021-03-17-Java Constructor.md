@@ -6,7 +6,7 @@ categories:
     - JAVA
 tags:
     - JAVA, Constructor
-last_modified_at: 2021-03-17T00:09:00-05:00
+last_modified_at: '2021-03-17 21:00:00 +0800'
 ---
 
 # 생성자
