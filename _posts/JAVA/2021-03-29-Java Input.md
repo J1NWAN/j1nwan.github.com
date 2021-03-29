@@ -154,7 +154,7 @@ public class Test {
 ---
 <br>
 
-## Console Print(콘솔 출력)
+# Console Print(콘솔 출력)
 
 ``` java
 System.out.print - 출력 후 줄바꿈 X
