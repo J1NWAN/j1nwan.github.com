@@ -20,20 +20,6 @@ meta_keywords: JAVA InputStream, InputStreamReader, BufferedReader,Scanner
 last_modified_at: '2021-03-29 23:00:00 +0800'
 ---
 
-<!-- ---
-title: "Java Input"
-excerpt: "Information processing"
-
-categories:
-    - JAVA
-tags:
-    - JAVA, Input
-last_modified_at: '2021-03-29 21:30:00 +0800'
-toc: true
-toc_sticky: true
-toc_label: 목차
---- -->
-
 # 콘솔 입출력
 
 > 콘솔 입출력은 키보드로 값을 입력하고 그 값을 콘솔창에 출력되는 것이다.
