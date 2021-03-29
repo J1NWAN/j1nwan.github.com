@@ -1,4 +1,26 @@
 ---
+title: Java 입출력( Input Output ) 이란
+layout: single
+author_profile: true
+read_time: true
+comments: true
+share: true
+related: true
+categories:
+- JAVA
+toc: true
+toc_sticky: true
+toc_label: 목차
+description: JAVA의 콘솔 입출력의 종류, 사용법 및 의미
+article_tag1: InputStream, InputStreamReader
+article_tag2: BufferedReader, Scanner
+article_tag3: Print
+article_section: JAVA Input Output 공부하기
+meta_keywords: JAVA InputStream, InputStreamReader, BufferedReader,Scanner
+last_modified_at: '2021-03-29 23:00:00 +0800'
+---
+
+<!-- ---
 title: "Java Input"
 excerpt: "Information processing"
 
@@ -10,7 +32,7 @@ last_modified_at: '2021-03-29 21:30:00 +0800'
 toc: true
 toc_sticky: true
 toc_label: 목차
----
+--- -->
 
 # 콘솔 입출력
 
