@@ -21,7 +21,7 @@ last_modified_at: '2021-03-31 23:00:00 +0800'
 
 # 정적(Static) 페이지와 동적(Dynamic) Pages
 
-![%E1%84%8B%E1%85%B0%E1%86%B8%20%E1%84%89%E1%85%A5%E1%84%87%E1%85%A5%E1%84%8B%E1%85%AA%20WAS(Web%20Application%20Server)%E1%84%8B%E1%85%B4%20%E1%84%8E%E1%85%A1%E1%84%8B%E1%85%B5%E1%84%8B%E1%85%AA%20%E1%84%8B%E1%85%B0%202b20fd2e9cc143d581b19edc58729097/Untitled.png](%E1%84%8B%E1%85%B0%E1%86%B8%20%E1%84%89%E1%85%A5%E1%84%87%E1%85%A5%E1%84%8B%E1%85%AA%20WAS(Web%20Application%20Server)%E1%84%8B%E1%85%B4%20%E1%84%8E%E1%85%A1%E1%84%8B%E1%85%B5%E1%84%8B%E1%85%AA%20%E1%84%8B%E1%85%B0%202b20fd2e9cc143d581b19edc58729097/Untitled.png)
+![StaticDynamic](https://user-images.githubusercontent.com/61576254/113129194-94210700-9255-11eb-8d88-4f9089bb216b.png)
 
 정적 페이지와 동적 페이지가 실행되는 구조
 
@@ -39,7 +39,7 @@ last_modified_at: '2021-03-31 23:00:00 +0800'
 
 # Web Server와 WAS의 차이
 
-![%E1%84%8B%E1%85%B0%E1%86%B8%20%E1%84%89%E1%85%A5%E1%84%87%E1%85%A5%E1%84%8B%E1%85%AA%20WAS(Web%20Application%20Server)%E1%84%8B%E1%85%B4%20%E1%84%8E%E1%85%A1%E1%84%8B%E1%85%B5%E1%84%8B%E1%85%AA%20%E1%84%8B%E1%85%B0%202b20fd2e9cc143d581b19edc58729097/Untitled%201.png](%E1%84%8B%E1%85%B0%E1%86%B8%20%E1%84%89%E1%85%A5%E1%84%87%E1%85%A5%E1%84%8B%E1%85%AA%20WAS(Web%20Application%20Server)%E1%84%8B%E1%85%B4%20%E1%84%8E%E1%85%A1%E1%84%8B%E1%85%B5%E1%84%8B%E1%85%AA%20%E1%84%8B%E1%85%B0%202b20fd2e9cc143d581b19edc58729097/Untitled%201.png)
+![WAS](https://user-images.githubusercontent.com/61576254/113129274-ac912180-9255-11eb-8b4a-44f667f9deec.png)
 
 Web Server와 WAS의 구조
 
@@ -171,7 +171,7 @@ Web Server를 WAS 앞에 두고 필요한 WAS들을 Web Server에 플러그인 �
 2. Client → WAS → DB
 3. Client → Web Server → WAS → DB
 
-![%E1%84%8B%E1%85%B0%E1%86%B8%20%E1%84%89%E1%85%A5%E1%84%87%E1%85%A5%E1%84%8B%E1%85%AA%20WAS(Web%20Application%20Server)%E1%84%8B%E1%85%B4%20%E1%84%8E%E1%85%A1%E1%84%8B%E1%85%B5%E1%84%8B%E1%85%AA%20%E1%84%8B%E1%85%B0%202b20fd2e9cc143d581b19edc58729097/Untitled%202.png](%E1%84%8B%E1%85%B0%E1%86%B8%20%E1%84%89%E1%85%A5%E1%84%87%E1%85%A5%E1%84%8B%E1%85%AA%20WAS(Web%20Application%20Server)%E1%84%8B%E1%85%B4%20%E1%84%8E%E1%85%A1%E1%84%8B%E1%85%B5%E1%84%8B%E1%85%AA%20%E1%84%8B%E1%85%B0%202b20fd2e9cc143d581b19edc58729097/Untitled%202.png)
+![WebServiceArchitecture](https://user-images.githubusercontent.com/61576254/113129311-b61a8980-9255-11eb-9e54-08a2458e8d33.png)
 
 3번 웹 서비스 구조의 동작과정
 
