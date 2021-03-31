@@ -94,7 +94,7 @@ Web Server와 WAS의 구조
        1. 프로그램 실행 환경과 DB 접속 기능 제공
        2. 여러 개의 트랜잭션(논리적인 작업 단위) 관리 지능
        3. 업무를 처리하는 비즈니스 로직 수행
-<br>
+
    **참고** <br><br>
    WAS의 종류
    Tomcat, JBoss, Jeus, Web Sphere 등..<br>
