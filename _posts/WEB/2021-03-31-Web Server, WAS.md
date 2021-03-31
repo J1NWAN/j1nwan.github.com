@@ -88,7 +88,7 @@ Web Server와 WAS의 구조
     **참고** <br><br>
     분산 트랜잭션, 보안, 메시징, 쓰레드 처리 등의 기능을 처리하는 분산 환경에서 사용된다.
     주로 DB 서버와 같이 수행된다.<br>
-    {: .notice—info}
+    {: .notice—-info}
 <br>
     - WAS의 주요 기능
         1. 프로그램 실행 환경과 DB 접속 기능 제공
@@ -99,7 +99,7 @@ Web Server와 WAS의 구조
     WAS의 종류
     Tomcat, JBoss, Jeus, Web Sphere 등..<br>
     {: .notice--info}
-
+    
 ---
 <br>
 
