@@ -65,7 +65,7 @@ Web Server와 WAS의 구조
 
     **참고** <br><br>
     Web Server의 종류
-    Apache Server, Nginx, IIS(Windows 전용 Web 서버) 등..
+    Apache Server, Nginx, IIS(Windows 전용 Web 서버) 등..<br>
     {: .notice--info}
 
     ## WAS(Web Application Server)
@@ -77,17 +77,17 @@ Web Server와 WAS의 구조
 
     **참고** <br><br>
     Container란 JSP, Servlet을 실행시킬 수 있는 소프트웨어를 말한다.
-    즉, WAS는 JSP, Servlet 구동 환경을 제공한다.
-    {: .notice—info}
+    즉, WAS는 JSP, Servlet 구동 환경을 제공한다.<br>
+    {: .notice--info}
 
     - WAS의 역활
         - **WAS = Web Server + Web Container**
         - Web Server 기능들을 구조적으로 분리하여 처리하고자하는 목적으로 제시되었다.
         - 현재는 WAS가 가지고 있는 Web Server도 정적인 컨텐츠를 처리하는 데 있어서 성능상 큰 차이가 없다.
 
-    **Info Notice:**
+    **참고** <br><br>
     분산 트랜잭션, 보안, 메시징, 쓰레드 처리 등의 기능을 처리하는 분산 환경에서 사용된다.
-    주로 DB 서버와 같이 수행된다.
+    주로 DB 서버와 같이 수행된다.<br>
     {: .notice—info}
 <br>
     - WAS의 주요 기능
@@ -97,7 +97,7 @@ Web Server와 WAS의 구조
 <br>
     **참고** <br><br>
     WAS의 종류
-    Tomcat, JBoss, Jeus, Web Sphere 등..
+    Tomcat, JBoss, Jeus, Web Sphere 등..<br>
     {: .notice--info}
 
 ---
@@ -129,8 +129,8 @@ Web Server와 WAS의 구조
     - Fail over(장애 극복), Fail back 처리에 유리
     - 대용량 어플리케이션의 경우(여러 개의 서버 사용) Web Server와 WAS를 분리하여 무중단 운영을 위한 장애 극복에 쉽게 대응할 수 있다.
 <br>
-    **참고**
-    앞 단의 Web Server에서 오류가 발생한 WAS를 이용하지 못하도록 한 후 WAS를 재시작함으로써 사용자는 오류를 느끼지 못하고 이용할 수 있다.
+    **참고** <br><br>
+    앞 단의 Web Server에서 오류가 발생한 WAS를 이용하지 못하도록 한 후 WAS를 재시작함으로써 사용자는 오류를 느끼지 못하고 이용할 수 있다.<br>
     {: .notice—-info}
 
 4. 여러 웹 어플리케이션 서비스 가능
@@ -140,8 +140,8 @@ Web Server와 WAS의 구조
 
 **참고** <br><br>
 즉, 자원 이용의 효율성 및 장애 극복, 배포 및 유지보수의 편의성을 위해 Web Server와 WAS를 분리한다.
-Web Server를 WAS 앞에 두고 필요한 WAS들을 Web Server에 플러그인 현태로 설정하면 더욱 효율적인 분산 처리가 가능하다.
-{: .notice-—info}
+Web Server를 WAS 앞에 두고 필요한 WAS들을 Web Server에 플러그인 현태로 설정하면 더욱 효율적인 분산 처리가 가능하다.<br>
+{: .notice--info}
 
 ---
 <br>
