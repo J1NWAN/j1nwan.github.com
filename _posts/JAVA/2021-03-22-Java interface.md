@@ -158,3 +158,7 @@ feed banana
 | 하드디스크, 디지털카메라... | Tiger, Lion... |
 > USB 포트에는 전자기기들이 지켜야만 하는 각종 규칙들이 있다. (인터페이스의 메소드)
 ---
+
+**Info Notice:**
+dd
+{: .notice--info}
