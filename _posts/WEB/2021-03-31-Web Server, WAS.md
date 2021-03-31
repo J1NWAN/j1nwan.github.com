@@ -67,38 +67,38 @@ Web Server와 WAS의 구조
     Web Server의 종류
     Apache Server, Nginx, IIS(Windows 전용 Web 서버) 등..<br>
     {: .notice--info}
+    
+## WAS(Web Application Server)
 
-    ## WAS(Web Application Server)
+   - WAS의 개념
+       - DB 조회나 다양한 로직 처리를 요구하는 **동적인 컨텐츠**를 제공하기 위해 만들어진 Application Server
+       - HTTP를 통해 컴퓨터나 장치에 애플리케이션을 수행해주는 미들웨어(소프트웨어 엔진)이다.
+       - **"웹 컨테이너(Web Container)" 혹은 "서블릿 컨테이너(Servlet Container)"**라고도 불린다.
 
-    - WAS의 개념
-        - DB 조회나 다양한 로직 처리를 요구하는 **동적인 컨텐츠**를 제공하기 위해 만들어진 Application Server
-        - HTTP를 통해 컴퓨터나 장치에 애플리케이션을 수행해주는 미들웨어(소프트웨어 엔진)이다.
-        - **"웹 컨테이너(Web Container)" 혹은 "서블릿 컨테이너(Servlet Container)"**라고도 불린다.
+   **참고** <br><br>
+   Container란 JSP, Servlet을 실행시킬 수 있는 소프트웨어를 말한다.
+   즉, WAS는 JSP, Servlet 구동 환경을 제공한다.<br>
+   {: .notice--info}
 
-    **참고** <br><br>
-    Container란 JSP, Servlet을 실행시킬 수 있는 소프트웨어를 말한다.
-    즉, WAS는 JSP, Servlet 구동 환경을 제공한다.<br>
-    {: .notice--info}
+   - WAS의 역활
+       - **WAS = Web Server + Web Container**
+       - Web Server 기능들을 구조적으로 분리하여 처리하고자하는 목적으로 제시되었다.
+       - 현재는 WAS가 가지고 있는 Web Server도 정적인 컨텐츠를 처리하는 데 있어서 성능상 큰 차이가 없다.
 
-    - WAS의 역활
-        - **WAS = Web Server + Web Container**
-        - Web Server 기능들을 구조적으로 분리하여 처리하고자하는 목적으로 제시되었다.
-        - 현재는 WAS가 가지고 있는 Web Server도 정적인 컨텐츠를 처리하는 데 있어서 성능상 큰 차이가 없다.
-
-    **참고** <br><br>
-    분산 트랜잭션, 보안, 메시징, 쓰레드 처리 등의 기능을 처리하는 분산 환경에서 사용된다.
-    주로 DB 서버와 같이 수행된다.<br>
-    {: .notice—-info}
+   **참고** <br><br>
+   분산 트랜잭션, 보안, 메시징, 쓰레드 처리 등의 기능을 처리하는 분산 환경에서 사용된다.
+   주로 DB 서버와 같이 수행된다.<br>
+   {: .notice—-info}
 <br>
-    - WAS의 주요 기능
-        1. 프로그램 실행 환경과 DB 접속 기능 제공
-        2. 여러 개의 트랜잭션(논리적인 작업 단위) 관리 지능
-        3. 업무를 처리하는 비즈니스 로직 수행
+   - WAS의 주요 기능
+       1. 프로그램 실행 환경과 DB 접속 기능 제공
+       2. 여러 개의 트랜잭션(논리적인 작업 단위) 관리 지능
+       3. 업무를 처리하는 비즈니스 로직 수행
 <br>
-    **참고** <br><br>
-    WAS의 종류
-    Tomcat, JBoss, Jeus, Web Sphere 등..<br>
-    {: .notice--info}
+   **참고** <br><br>
+   WAS의 종류
+   Tomcat, JBoss, Jeus, Web Sphere 등..<br>
+   {: .notice--info}
     
 ---
 <br>
