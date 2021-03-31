@@ -63,12 +63,9 @@ Web Server와 WAS의 구조
         - 클라이언트의 요청(Request)을 WAS에 보내고, WAS가 처리한 결과를 클라이언트에게 전달(응답, Response)한다.
         - 클라이언트는 일반적으로 웹 브라우저를 의미한다.
 
-    **Info Notice:**
-
+    **참고** <br><br>
     Web Server의 종류
-
     Apache Server, Nginx, IIS(Windows 전용 Web 서버) 등..
-
     {: .notice—info}
 
     ## WAS(Web Application Server)
@@ -78,7 +75,7 @@ Web Server와 WAS의 구조
         - HTTP를 통해 컴퓨터나 장치에 애플리케이션을 수행해주는 미들웨어(소프트웨어 엔진)이다.
         - **"웹 컨테이너(Web Container)" 혹은 "서블릿 컨테이너(Servlet Container)"**라고도 불린다.
 
-    **Info Notice:**
+    **참고** <br><br>
     Container란 JSP, Servlet을 실행시킬 수 있는 소프트웨어를 말한다.
     즉, WAS는 JSP, Servlet 구동 환경을 제공한다.
     {: .notice—info}
@@ -98,7 +95,7 @@ Web Server와 WAS의 구조
         2. 여러 개의 트랜잭션(논리적인 작업 단위) 관리 지능
         3. 업무를 처리하는 비즈니스 로직 수행
 <br>
-    **Info Notice:**
+    **참고** <br><br>
     WAS의 종류
     Tomcat, JBoss, Jeus, Web Sphere 등..
     {: .notice—info}
@@ -141,7 +138,7 @@ Web Server와 WAS의 구조
 5. 기타
     - 접근 허용 IP 관리, 2대 이상의 서버에서의 세션 관리 등도 Web Server에서 처리하면 효율적이다.
 
-**Info Notice**
+**참고** <br><br>
 즉, 자원 이용의 효율성 및 장애 극복, 배포 및 유지보수의 편의성을 위해 Web Server와 WAS를 분리한다.
 Web Server를 WAS 앞에 두고 필요한 WAS들을 Web Server에 플러그인 현태로 설정하면 더욱 효율적인 분산 처리가 가능하다.
 {: .notice—info}
