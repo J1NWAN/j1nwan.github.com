@@ -1,4 +1,4 @@
---
+---
 title: Web Server와 WAS(Web Application Server)의 차이와 웹 서비스 구조
 layout: single
 author_profile: true
@@ -17,7 +17,7 @@ article_tag3: Web Service Architecture
 article_section: 웹 개발을 하기전 기초적인 Web 공부
 meta_keywords: Web Server, WAS
 last_modified_at: '2021-03-31 23:00:00 +0800'
---
+---
 
 # 정적(Static) 페이지와 동적(Dynamic) Pages
 
