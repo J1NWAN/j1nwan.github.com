@@ -16,7 +16,7 @@ article_tag2: Web Server, WAS
 article_tag3: Web Service Architecture
 article_section: 웹 개발을 하기전 기초적인 Web 공부
 meta_keywords: Web Server, WAS
-last_modified_at: '2021-03-31 23:00:00 +0800'
+last_modified_at: '2021-03-31 19:00:00 +0800'
 ---
 
 # 정적(Static) 페이지와 동적(Dynamic) Pages
@@ -63,10 +63,10 @@ Web Server와 WAS의 구조
         - 클라이언트의 요청(Request)을 WAS에 보내고, WAS가 처리한 결과를 클라이언트에게 전달(응답, Response)한다.
         - 클라이언트는 일반적으로 웹 브라우저를 의미한다.<br>
 
-    **참고** <br><br>
-    Web Server의 종류<br>
-    Apache Server, Nginx, IIS(Windows 전용 Web 서버) 등..<br>
-    {: .notice--info}
+   **참고** <br><br>
+   Web Server의 종류<br>
+   Apache Server, Nginx, IIS(Windows 전용 Web 서버) 등..<br>
+   {: .notice--info}
     
 ## WAS(Web Application Server)
 
@@ -102,7 +102,7 @@ Web Server와 WAS의 구조
 ## Web Server가 필요한 이유
 
 - Web Server를 통해 정적인 파일들을 Application Server까지 가지 않고 앞단에서 빠르게 보내줄 수 있다.
-- Web Server에서는 정적 컨텐츠만 처리하도록 기능을 분배하여 서버의 부당을 줄일 수 있다.
+- Web Server에서는 정적 컨텐츠만 처리하도록 기능을 분배하여 서버의 부을 줄일 수 있다.
 
 ## WAS가 필요한 이유
 
