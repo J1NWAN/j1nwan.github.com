@@ -66,7 +66,7 @@ Web Server와 WAS의 구조
     **참고** <br><br>
     Web Server의 종류
     Apache Server, Nginx, IIS(Windows 전용 Web 서버) 등..
-    {: .notice—info}
+    {: .notice--info}
 
     ## WAS(Web Application Server)
 
@@ -98,7 +98,7 @@ Web Server와 WAS의 구조
     **참고** <br><br>
     WAS의 종류
     Tomcat, JBoss, Jeus, Web Sphere 등..
-    {: .notice—info}
+    {: .notice--info}
 
 ---
 <br>
@@ -129,9 +129,9 @@ Web Server와 WAS의 구조
     - Fail over(장애 극복), Fail back 처리에 유리
     - 대용량 어플리케이션의 경우(여러 개의 서버 사용) Web Server와 WAS를 분리하여 무중단 운영을 위한 장애 극복에 쉽게 대응할 수 있다.
 <br>
-    **Info Notice:**
+    **참고**
     앞 단의 Web Server에서 오류가 발생한 WAS를 이용하지 못하도록 한 후 WAS를 재시작함으로써 사용자는 오류를 느끼지 못하고 이용할 수 있다.
-    {: .notice—info}
+    {: .notice—-info}
 
 4. 여러 웹 어플리케이션 서비스 가능
     - 하나의 서버에서 PHP Application과 JAVA Application을 함께 사용하는 경우
@@ -141,7 +141,7 @@ Web Server와 WAS의 구조
 **참고** <br><br>
 즉, 자원 이용의 효율성 및 장애 극복, 배포 및 유지보수의 편의성을 위해 Web Server와 WAS를 분리한다.
 Web Server를 WAS 앞에 두고 필요한 WAS들을 Web Server에 플러그인 현태로 설정하면 더욱 효율적인 분산 처리가 가능하다.
-{: .notice—info}
+{: .notice-—info}
 
 ---
 <br>
