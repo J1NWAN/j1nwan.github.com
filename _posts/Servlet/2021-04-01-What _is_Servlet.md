@@ -32,7 +32,8 @@ last_modified_at: '2021-04-01 17:00:00 +0800'
 
 # HTML Form
 
-> input elements(Ex. 텍스트 상자)가 포함된 웹 페이지의 한 부분(section)
+> input elements(Ex. 텍스트 상자)가 포함된 웹 페이지의 한 부분(section) <br>
+
 ``` html
 <div>
 	<label>x : </label>
@@ -46,21 +47,24 @@ last_modified_at: '2021-04-01 17:00:00 +0800'
 </div>
 ```
 
-* 사용자가 입력한 정보(form contents)를 웹 서버로 전송하기 위한 submit element(Ex. 버튼)가 존재한다.
+* 사용자가 입력한 정보(form contents)를 웹 서버로 전송하기 위한 submit element(Ex. 버튼)가 존재한다. <br>
 ``` html
 <input type="submit" value="결과" />
 <!-- 버튼을 누르면 결과가 서버쪽으로 이동한다.-->
 ```
-* action에는 form을 처리하는 서버 쪽 URL을 명시한다.
+<br>
+* action에는 form을 처리하는 서버 쪽 URL을 명시한다.<br>
+
 ``` html
 <!-- add.html -->
 <form action="add" method="post">
 ```
+<br>
 ``` java
 // add.java
 @WebServlet("/add") // 맵핑이라고 하며 URL을 나타낸다.
 ```
-
+<br>
 <details>
 <summary>위 내용의 소스코드</summary>
 <div markdown="1">       
@@ -81,6 +85,7 @@ last_modified_at: '2021-04-01 17:00:00 +0800'
 	</div>
 </form>
 ```
+
 ``` java
 // add.java
 @WebServlet("/add")
@@ -116,7 +121,9 @@ public class Add extends HttpServlet {
 <br>
 
 ## 클라이언트(browser)가 요청하는 URL 정보
+
 * 요청을 보낼 서버의 IP 주소 : Port 번호 / App 이름 / 달라고 요청하는 HTML <br>
+
 **URL주소** <br><br>
 Ex) localhost:8080/add/addForm.html
 {: .notice--info}
@@ -172,13 +179,15 @@ Ex) localhost:8080/add/addForm.html
 
 >Form을 서버에 전송하는 방식으로, 두 가지 HTTP Method를 지정할 수 있다.
 
-1. GET Method
+* GET Method
    * 사용자가 입력한 내용(form data)이 URL뒤에 텍스트 문자열로 추가된다.
      * 크기 제한: **1024 characters**
      * data는 **?** 기준으로 action URL과 분리된다. <br>
-** data 정보 ** <br><br>
+     * 
+**data정보 ** <br><br>
 http://localhost:8080/add?x=1&y=2=result
 {: .notice--info}
+
    * 브라우저에서 웹 서버로 정보를 전달하는 기본 Method(Default Method)
      * HTTP Method를 지정하지 않으면 GET Method를 호출한다.
    * 서버에 전달하는 data에 암호와 같은 민갑한 정보가 있는 경우는 GET Method를 사용하지 않는다.
@@ -186,7 +195,8 @@ http://localhost:8080/add?x=1&y=2=result
    * GET 메소드의 사용
      * Query-Type actions: DB에 영향을 주지 않는 단순히 읽기 위주(read operation)의 작업
      * Idempotemt actions: 몇번이고 같은 연산을 반복해도 같은 값이 나오는 작업<br>
-2. POST Method
+
+* POST Method
    * 사용자가 입력한 내용(form data)을 별도의 메세지로 보낸다.
    * Request Body에 data를 추가한다.
      * URL에 직접적으로 data가 노출되지 않기 때문에 GET Method보다 보안상으로 조금 더 안전하다.
@@ -224,18 +234,18 @@ http://localhost:8080/add?x=1&y=2=result
    * 각 thread는 Servlet의 단일 객체에 대한 service() Method를 실행한다. <br>
 
 **참고 - Servlet Program에서 Thread의 역할** <br><br>
-* **Thread란?** 운영체제로부터 시스템 자원을 할당받는 작업의 단위
-  * 블로그 참조
-* Servlet Program에서 thread가 수행할 Method가 지정/할당되면
-  * thread는 생성 후 즉시 해당 Method만 열심히 수행한다.
-  * 해당 Method가 return하면 thread는 종료되고 제거된다.
-  * 즉, 실제로 thread의 혁할: **Servlet의 doGet() 또는 doPost()를 호출**하는 것이다.
-* Web Container(Servlet Container)는 thread의 생성과 제거를 담당한다.
-  * 하지만 thread의 생성과 제거의 반복은 큰 오버헤드를 만든다.
-  * 이를 위해 Tomcat(WAS)은 "**Thread Pool**"(미리 thread를 만들어 놓음) 이라는 적절한 메커니즘을 사용하여 오버헤드를 줄인다.
-* 즉, WAS는 Servlet의 life cycle을 담당한다.
-  * 웹 브라우저 클라이언트의 요청이 들어왔을 때 Servlet 객체 생성은 WAS가 알아서 처리한다.
-  * WAS 위에서 Servlet이 돌아다니고 개발자는 이 Servlet을 만들어야 한다.
+- __Thread란?__ 운영체제로부터 시스템 자원을 할당받는 작업의 단위
+  - 블로그 참조
+- Servlet Program에서 thread가 수행할 Method가 지정/할당되면
+  - thread는 생성 후 즉시 해당 Method만 열심히 수행한다.
+  - 해당 Method가 return하면 thread는 종료되고 제거된다.
+  - 즉, 실제로 thread의 혁할: **Servlet의 doGet() 또는 doPost()를 호출**하는 것이다.
+- Web Container(Servlet Container)는 thread의 생성과 제거를 담당한다.
+  - 하지만 thread의 생성과 제거의 반복은 큰 오버헤드를 만든다.
+  - 이를 위해 Tomcat(WAS)은 "**Thread Pool**"(미리 thread를 만들어 놓음) 이라는 적절한 메커니즘을 사용하여 오버헤드를 줄인다.
+- 즉, WAS는 Servlet의 life cycle을 담당한다.
+  - 웹 브라우저 클라이언트의 요청이 들어왔을 때 Servlet 객체 생성은 WAS가 알아서 처리한다.
+  - WAS 위에서 Servlet이 돌아다니고 개발자는 이 Servlet을 만들어야 한다.
 {: .notice--info}
 
 ---
@@ -265,7 +275,9 @@ if (메모리에 없음) {
 
 **역할** <br><br>
 Servlet 객체를 초기화
-{: .notice--info} <br>
+{: .notice--info} 
+
+<br>
 
 * **service(request, response)**
   * 응답에 대한 모든 내용은 `service()` Method에 구현해야 한다.
@@ -282,7 +294,7 @@ Servlet 객체를 초기화
 
 **역할** <br><br>
 Servlet 객체를 메모리에서 제거
-{: .notice--info} <br>
+{: .notice--info}
 
 ---
 <br>
@@ -324,13 +336,16 @@ public class Add extends HttpServlet {
 * WAS는 웹 브라우저로부터 요청을 받으면
   1. 요청할 때 가지고 있는 정보를 HttpServletRequest객체를 생성하여 저장한다.
   2. 웹 브라우저에게 응답을 보낼 때 사용하기 위하여 HttpServletResponse객체를 생성한다.
-  3. 생성된 HttpServletRequest, HttpServletResponse 객체를 Servlet에게 전달한다.
+  3. 생성된 HttpServletRequest, HttpServletResponse 객체를 Servlet에게 전달한다. <br>
+
 * 개발자는 일반적으로 `javax.servlet.http.HttpServlet`를 상속받은 Servlet 클래스를 작성한다.
   * HttpServletRequest의 `request` 파라미터를 통해 사용자가 입력한 form data를 읽는다.
-  * HttpServletResponse의 `response` 파라미터를 통해 출력/결과 Web Page를 생성한다.
+  * HttpServletResponse의 `response` 파라미터를 통해 출력/결과 Web Page를 생성한다.<br>
+
 * 개발자는 Servlet 클래스에 doGet() 또는 doPost() 중 적어도 하나를 재정의하여 작성한다.
   * `protected doGet()(HttpServletRequest request, HttpServletResponse response){}`
-  * `protected doPost()(HttpServletRequest request, HttpServletResponse response){}`
+  * `protected doPost()(HttpServletRequest request, HttpServletResponse response){}` <br>
+
 * **HttpServletRequest `request` 객체**
   * 사용자가 HTML Form에 입력한 내용(x와 y)을 request 객체에서 받아온다.
     * 즉, HTTP 프로토콜의 Request 정보를 Servlet에게 전달
@@ -344,12 +359,13 @@ public class Add extends HttpServlet {
       * 이런 Parameter 값은 URL 또는 form의 input tag(name)을 통해서 넘어올 수 있다.
   * getParameterValues()
     * form parameter가 두 번 이상 나타나고 여러 개의 값을 반환할 때 이 Method를 호출한다. (Ex. checkbox)
-    * `String languages[] = request.getParameterValues("language");` <br>
+    * `String languages[] = request.getParameterValues("language");` <br><br>
 
 * **HttpServletResponse responser 객체**
   * 인자의 내용에 맞게 동적인 HTML 코드를 생성하여 `response` 객체에 담아 반환한다.
   * getWriter() Method를 호출하여 `PrintWriter` 객체를 가져온 후 해당 객체에서 `print`, `println` Method를 실행한다.
-  * 즉, form data를 처리한 결과를 Web Page에 생성(view 생성)하여 반환한다.
+  * 즉, form data를 처리한 결과를 Web Page에 생성(view 생성)하여 반환한다. <br>
+
 ``` java
 // Ex)
 
@@ -361,6 +377,7 @@ response.getWriter().printf("result is %d\n", result);
 PrintWriter out = response.getWriter();
 out.println("result is " + result);
 ```
+
 예시의 2번 코드를 실행할 때는 `import java.io.PrintWriter`를 해줘야 한다. <br>
 
 ---
@@ -423,7 +440,8 @@ public class Simple extends HttpServlet {
    * `@WebServlet("/test")` <br>
 2. Servlet3.0 spec 미만
    * Servlet을 등록할 때 web.xml 파일에 직접 등록
-   * 예시
+   * 예시 <br>
+  
 ``` xml
 <?xml version="1.0" encoding="UTF-8"?>
 
@@ -443,10 +461,11 @@ public class Simple extends HttpServlet {
 
 </web-app>
 ```
+
    * `<servlet-mapping>`에서 해당 url이 존재하지 않으면 404 응답 코드를 반환한다.
    * `<servlet-mapping>`의 servlet-name과 `<servlet>`의 servlet-name을 동일하게 작성해야 해당 url에 맞는 Servlet을 찾을 수 있다.
 
 ---
 <br>
 
-> 위의 내용들의 출처 : [https://gmlwjd9405.github.io/2018/10/27/webserver-vs-was.html](https://gmlwjd9405.github.io/2018/10/27/webserver-vs-was.html)
+> 위의 내용들의 출처 : [https://gmlwjd9405.github.io/2018/10/28/servlet.html]
