@@ -18,7 +18,7 @@ article_section: Java를 이용한 WEB개발을 위해 Sevlet 이해하기
 meta_keywords: Web Service, HTML Form, Servlet
 last_modified_at: '2021-04-01 17:00:00 +0800'
 ---
-ㅇd
+
 # Web Service의 기본적인 동작 과정
 
 <img width="771" alt="스크린샷 2021-04-01 오후 4 44 57" src="https://user-images.githubusercontent.com/61576254/113260761-9d6bab80-9309-11eb-910e-249c54cfbdd2.png">
@@ -48,6 +48,7 @@ last_modified_at: '2021-04-01 17:00:00 +0800'
 ```
 
 * 사용자가 입력한 정보(form contents)를 웹 서버로 전송하기 위한 submit element(Ex. 버튼)가 존재한다. <br>
+
 ``` html
 <input type="submit" value="결과" />
 <!-- 버튼을 누르면 결과가 서버쪽으로 이동한다.-->
@@ -183,7 +184,7 @@ Ex) localhost:8080/add/addForm.html
    * 사용자가 입력한 내용(form data)이 URL뒤에 텍스트 문자열로 추가된다.
      * 크기 제한: **1024 characters**
      * data는 **?** 기준으로 action URL과 분리된다. <br>
-     * 
+
 **data정보 ** <br><br>
 http://localhost:8080/add?x=1&y=2=result
 {: .notice--info}
@@ -233,7 +234,7 @@ http://localhost:8080/add?x=1&y=2=result
 3. Web Container는 Request가 올 때마다 thread를 생성하여 처리한다.
    * 각 thread는 Servlet의 단일 객체에 대한 service() Method를 실행한다. <br>
 
-**참고 - Servlet Program에서 Thread의 역할** <br><br>
+**Servlet Program에서 Thread의 역할** <br><br>
 - __Thread란?__ 운영체제로부터 시스템 자원을 할당받는 작업의 단위
   - 블로그 참조
 - Servlet Program에서 thread가 수행할 Method가 지정/할당되면
@@ -273,11 +274,10 @@ if (메모리에 없음) {
   * 한 번만 수행된다.
   * 클라이언트(browser)의 요청에 따라 적절한 Servlet이 생성되고 이 Servlet이 메모리에 로드될 때 `init()` Method가 호출된다. <br>
 
-**역할** <br><br>
+**init() 역할** <br><br>
 Servlet 객체를 초기화
-{: .notice--info} 
+{: .notice--info}
 
-<br>
 
 * **service(request, response)**
   * 응답에 대한 모든 내용은 `service()` Method에 구현해야 한다.
@@ -292,7 +292,7 @@ Servlet 객체를 초기화
   * 한 번만 수행된다.
   * Web Application이 갱신되거나 WAS가 종료될 때 호출된다. <br>
 
-**역할** <br><br>
+**destroy() 역할** <br><br>
 Servlet 객체를 메모리에서 제거
 {: .notice--info}
 
@@ -336,15 +336,18 @@ public class Add extends HttpServlet {
 * WAS는 웹 브라우저로부터 요청을 받으면
   1. 요청할 때 가지고 있는 정보를 HttpServletRequest객체를 생성하여 저장한다.
   2. 웹 브라우저에게 응답을 보낼 때 사용하기 위하여 HttpServletResponse객체를 생성한다.
-  3. 생성된 HttpServletRequest, HttpServletResponse 객체를 Servlet에게 전달한다. <br>
+  3. 생성된 HttpServletRequest, HttpServletResponse 객체를 Servlet에게 전달한다.
+
 
 * 개발자는 일반적으로 `javax.servlet.http.HttpServlet`를 상속받은 Servlet 클래스를 작성한다.
   * HttpServletRequest의 `request` 파라미터를 통해 사용자가 입력한 form data를 읽는다.
-  * HttpServletResponse의 `response` 파라미터를 통해 출력/결과 Web Page를 생성한다.<br>
+  * HttpServletResponse의 `response` 파라미터를 통해 출력/결과 Web Page를 생성한다.
+
 
 * 개발자는 Servlet 클래스에 doGet() 또는 doPost() 중 적어도 하나를 재정의하여 작성한다.
   * `protected doGet()(HttpServletRequest request, HttpServletResponse response){}`
-  * `protected doPost()(HttpServletRequest request, HttpServletResponse response){}` <br>
+  * `protected doPost()(HttpServletRequest request, HttpServletResponse response){}`
+
 
 * **HttpServletRequest `request` 객체**
   * 사용자가 HTML Form에 입력한 내용(x와 y)을 request 객체에서 받아온다.
@@ -359,7 +362,10 @@ public class Add extends HttpServlet {
       * 이런 Parameter 값은 URL 또는 form의 input tag(name)을 통해서 넘어올 수 있다.
   * getParameterValues()
     * form parameter가 두 번 이상 나타나고 여러 개의 값을 반환할 때 이 Method를 호출한다. (Ex. checkbox)
-    * `String languages[] = request.getParameterValues("language");` <br><br>
+    * `String languages[] = request.getParameterValues("language");`
+
+
+
 
 * **HttpServletResponse responser 객체**
   * 인자의 내용에 맞게 동적인 HTML 코드를 생성하여 `response` 객체에 담아 반환한다.
