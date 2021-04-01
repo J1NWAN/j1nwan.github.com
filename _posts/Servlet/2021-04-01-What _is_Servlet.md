@@ -51,11 +51,14 @@ last_modified_at: '2021-04-01 17:00:00 +0800'
 <input type="submit" value="결과" />
 <!-- 버튼을 누르면 결과가 서버쪽으로 이동한다.-->
 ```
+
 * action에는 form을 처리하는 서버 쪽 URL을 명시한다.
+
 ``` html
 <!-- add.html -->
 <form action="add" method="post">
 ```
+
 ``` java
 // add.java
 @WebServlet("/add") // 맵핑이라고 하며 URL을 나타낸다.
@@ -81,6 +84,7 @@ last_modified_at: '2021-04-01 17:00:00 +0800'
 	</div>
 </form>
 ```
+
 ``` java
 // add.java
 @WebServlet("/add")
