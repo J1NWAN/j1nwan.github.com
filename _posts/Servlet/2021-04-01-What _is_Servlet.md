@@ -53,7 +53,7 @@ last_modified_at: '2021-04-01 17:00:00 +0800'
 <input type="submit" value="결과" />
 <!-- 버튼을 누르면 결과가 서버쪽으로 이동한다.-->
 ```
-<br>
+
 * action에는 form을 처리하는 서버 쪽 URL을 명시한다.<br>
 
 ``` html
@@ -226,7 +226,7 @@ http://localhost:8080/add?x=1&y=2=result
 1. Web Server는 HTTP request를 Web Container(Servlet Container)에게 위임한다.
    * 1) web.xml 설정에서 어떤 URL과 매핑되어 있는지 확인
    * 2) 클라이언트(browser)의 요청 URL을 보고 적절한 Servlet을 실행
-   * 블로그 주소 입력란
+   * https://gmlwjd9405.github.io/2018/10/29/web-application-structure.html 참고
 2. Web Container는 service() Method를 호출하기 전에 Servlet 객체를 메모리에 올린다.
    * 1) Web Container는 적절한 Servlet 파일을 컴파일(.class 파일 생성)한다.
    * 2) .class 파일을 메모리에 올려 Servlet 객체를 만든다.
@@ -234,9 +234,10 @@ http://localhost:8080/add?x=1&y=2=result
 3. Web Container는 Request가 올 때마다 thread를 생성하여 처리한다.
    * 각 thread는 Servlet의 단일 객체에 대한 service() Method를 실행한다. <br>
 
+
 **Servlet Program에서 Thread의 역할** <br><br>
 - __Thread란?__ 운영체제로부터 시스템 자원을 할당받는 작업의 단위
-  - 블로그 참조
+  - https://gmlwjd9405.github.io/2018/09/14/process-vs-thread.html 참고
 - Servlet Program에서 thread가 수행할 Method가 지정/할당되면
   - thread는 생성 후 즉시 해당 Method만 열심히 수행한다.
   - 해당 Method가 return하면 thread는 종료되고 제거된다.
@@ -336,17 +337,17 @@ public class Add extends HttpServlet {
 * WAS는 웹 브라우저로부터 요청을 받으면
   1. 요청할 때 가지고 있는 정보를 HttpServletRequest객체를 생성하여 저장한다.
   2. 웹 브라우저에게 응답을 보낼 때 사용하기 위하여 HttpServletResponse객체를 생성한다.
-  3. 생성된 HttpServletRequest, HttpServletResponse 객체를 Servlet에게 전달한다.
+  3. 생성된 HttpServletRequest, HttpServletResponse 객체를 Servlet에게 전달한다. <br>
 
 
 * 개발자는 일반적으로 `javax.servlet.http.HttpServlet`를 상속받은 Servlet 클래스를 작성한다.
   * HttpServletRequest의 `request` 파라미터를 통해 사용자가 입력한 form data를 읽는다.
-  * HttpServletResponse의 `response` 파라미터를 통해 출력/결과 Web Page를 생성한다.
+  * HttpServletResponse의 `response` 파라미터를 통해 출력/결과 Web Page를 생성한다. <br>
 
 
 * 개발자는 Servlet 클래스에 doGet() 또는 doPost() 중 적어도 하나를 재정의하여 작성한다.
   * `protected doGet()(HttpServletRequest request, HttpServletResponse response){}`
-  * `protected doPost()(HttpServletRequest request, HttpServletResponse response){}`
+  * `protected doPost()(HttpServletRequest request, HttpServletResponse response){}` <br>
 
 
 * **HttpServletRequest `request` 객체**
