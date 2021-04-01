@@ -18,7 +18,7 @@ article_section: Java를 이용한 WEB개발을 위해 Sevlet 이해하기
 meta_keywords: Web Service, HTML Form, Servlet
 last_modified_at: '2021-04-01 17:00:00 +0800'
 ---
-
+ㅇd
 # Web Service의 기본적인 동작 과정
 
 <img width="771" alt="스크린샷 2021-04-01 오후 4 44 57" src="https://user-images.githubusercontent.com/61576254/113260761-9d6bab80-9309-11eb-910e-249c54cfbdd2.png">
