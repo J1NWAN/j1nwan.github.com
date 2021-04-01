@@ -226,18 +226,18 @@ http://localhost:8080/add?x=1&y=2=result
 1. Web Server는 HTTP request를 Web Container(Servlet Container)에게 위임한다.
    * 1) web.xml 설정에서 어떤 URL과 매핑되어 있는지 확인
    * 2) 클라이언트(browser)의 요청 URL을 보고 적절한 Servlet을 실행
-   * https://gmlwjd9405.github.io/2018/10/29/web-application-structure.html 참고
+   * [참고 블로그](https://gmlwjd9405.github.io/2018/10/29/web-application-structure.html)
 2. Web Container는 service() Method를 호출하기 전에 Servlet 객체를 메모리에 올린다.
    * 1) Web Container는 적절한 Servlet 파일을 컴파일(.class 파일 생성)한다.
    * 2) .class 파일을 메모리에 올려 Servlet 객체를 만든다.
    * 3) 메모리에 로드될 때 Servlet 객체를 초기화하는 init() Method가 실행된다.
 3. Web Container는 Request가 올 때마다 thread를 생성하여 처리한다.
-   * 각 thread는 Servlet의 단일 객체에 대한 service() Method를 실행한다. <br>
+   * 각 thread는 Servlet의 단일 객체에 대한 service() Method를 실행한다. <br><br>
 
 
 - **Servlet Program에서 Thread의 역할**
   - __Thread란?__ 운영체제로부터 시스템 자원을 할당받는 작업의 단위
-    - https://gmlwjd9405.github.io/2018/09/14/process-vs-thread.html 참고
+    - [참고 블로그](https://gmlwjd9405.github.io/2018/09/14/process-vs-thread.html)
   - Servlet Program에서 thread가 수행할 Method가 지정/할당되면
     - thread는 생성 후 즉시 해당 Method만 열심히 수행한다.
     - 해당 Method가 return하면 thread는 종료되고 제거된다.
@@ -474,4 +474,4 @@ public class Simple extends HttpServlet {
 ---
 <br>
 
-> 위의 내용들의 출처 : [https://gmlwjd9405.github.io/2018/10/28/servlet.html]
+> 위의 내용들의 출처 : (https://gmlwjd9405.github.io/2018/10/28/servlet.html)
