@@ -18,7 +18,7 @@ article_section: Java를 이용한 WEB개발을 위해 Sevlet 이해하기
 meta_keywords: Web Service, HTML Form, Servlet
 last_modified_at: '2021-04-01 17:00:00 +0800'
 ---
-
+ㅇ
 # Web Service의 기본적인 동작 과정
 
 <img width="771" alt="스크린샷 2021-04-01 오후 4 44 57" src="https://user-images.githubusercontent.com/61576254/113260761-9d6bab80-9309-11eb-910e-249c54cfbdd2.png">
@@ -46,24 +46,24 @@ last_modified_at: '2021-04-01 17:00:00 +0800'
 </div>
 ```
 
-* 사용자가 입력한 정보(form contents)를 웹 서버로 전송하기 위한 submit element(Ex. 버튼)가 존재한다.
+* 사용자가 입력한 정보(form contents)를 웹 서버로 전송하기 위한 submit element(Ex. 버튼)가 존재한다. <br>
 ``` html
 <input type="submit" value="결과" />
 <!-- 버튼을 누르면 결과가 서버쪽으로 이동한다.-->
 ```
-
-* action에는 form을 처리하는 서버 쪽 URL을 명시한다.
+<br>
+* action에는 form을 처리하는 서버 쪽 URL을 명시한다.<br>
 
 ``` html
 <!-- add.html -->
 <form action="add" method="post">
 ```
-
+<br>
 ``` java
 // add.java
 @WebServlet("/add") // 맵핑이라고 하며 URL을 나타낸다.
 ```
-
+<br>
 <details>
 <summary>위 내용의 소스코드</summary>
 <div markdown="1">       
