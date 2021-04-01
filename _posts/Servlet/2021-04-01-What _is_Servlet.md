@@ -21,7 +21,7 @@ last_modified_at: '2021-03-31 19:00:00 +0800'
 
 # Web Service의 기본적인 동작 과정
 
-1번 이미지 넣는 구간
+<img width="771" alt="스크린샷 2021-04-01 오후 4 44 57" src="https://user-images.githubusercontent.com/61576254/113260761-9d6bab80-9309-11eb-910e-249c54cfbdd2.png">
 
 1. 사용자가 웹 페이지 form(HTML Form)을 통해 자신의 정보를 입력한다. (Input)
 2. Servlet의 doGet() 또는 doPost() method는 입력한 form data에 맞게 DB또는 다른 소스에서 관련된 정보를 검색한다.
@@ -209,7 +209,8 @@ http://localhost:8080/add?x=1&y=2=result
 
 ## Servlet Program의 기본적인 동작 과정
 
-이미지 넣는 부분
+<img width="748" alt="스크린샷 2021-04-01 오후 3 13 59" src="https://user-images.githubusercontent.com/61576254/113260866-bb391080-9309-11eb-8363-d48ad7041e70.png">
+
 
 1. Web Server는 HTTP request를 Web Container(Servlet Container)에게 위임한다.
    * 1) web.xml 설정에서 어떤 URL과 매핑되어 있는지 확인
@@ -242,7 +243,8 @@ http://localhost:8080/add?x=1&y=2=result
 
 ## Servlet Life Cycle
 
-이미지 넣는 구간
+<img width="745" alt="스크린샷 2021-04-01 오후 3 32 01" src="https://user-images.githubusercontent.com/61576254/113260907-c7bd6900-9309-11eb-8c91-fab2c62b4678.png">
+
 
 * 클라이언트의 요청이 들어오면 WAS는 해당 요청에 맞는 Servlet이 메모리에 있는지 확인한다.
   * 만약 메모리에 없다면 해당 Servlet Class를 메모리에 올린 후(Servlet 객체 생성)`init` Method 실행
@@ -366,7 +368,8 @@ out.println("result is " + result);
 
 ## Servlet Concurrency
 
-이미지 넣는 구간
+<img width="721" alt="스크린샷 2021-04-01 오후 4 24 48" src="https://user-images.githubusercontent.com/61576254/113260967-d7d54880-9309-11eb-8fab-9272fe67bce3.png">
+
 
 * Java 서블릿 컨테이너 / 웹 서버는 일반적으로 멀티 쓰레드 환경이다.
   * 같은 Servlet에 대한 여러 개의 요청이 동시에 실행될 수 있어 runtime에 따라 결과가 달라질 수 있다.
@@ -380,7 +383,8 @@ out.println("result is " + result);
 
 ## Servlet Annotation
 
-이미지 넣는 구간
+<img width="754" alt="스크린샷 2021-04-01 오후 4 27 42" src="https://user-images.githubusercontent.com/61576254/113260993-defc5680-9309-11eb-8f6a-77d3ff4473bb.png">
+
 
 * Servlet API 3.0은 `javax.servlet.annotation` 이라는  새로운 패키지를 도입했다.
   * Tomcat 7 이상에서 사용 가능
