@@ -32,7 +32,7 @@ last_modified_at: '2021-04-01 17:00:00 +0800'
 
 # HTML Form
 
-> input elements(Ex. 텍스트 상자)가 포함된 웹 페이지의 한 부분(section)
+> input elements(Ex. 텍스트 상자)가 포함된 웹 페이지의 한 부분(section) <br>
 ``` html
 <div>
 	<label>x : </label>
