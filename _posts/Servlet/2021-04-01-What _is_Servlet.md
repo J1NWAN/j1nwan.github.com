@@ -16,7 +16,7 @@ article_tag2: 사용자 입력을 위한 HTML Form을 이해한다.
 article_tag3: Servlet을 이해한다.
 article_section: Java를 이용한 WEB개발을 위해 Sevlet 이해하기
 meta_keywords: Web Service, HTML Form, Servlet
-last_modified_at: '2021-03-31 19:00:00 +0800'
+last_modified_at: '2021-04-01 17:00:00 +0800'
 ---
 
 # Web Service의 기본적인 동작 과정
