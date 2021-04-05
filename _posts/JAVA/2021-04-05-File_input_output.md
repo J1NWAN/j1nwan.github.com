@@ -25,6 +25,7 @@ last_modified_at: '2021-04-05 22:00:00 +0800'
 Java로 파일을 쓰는 방법은 여러가지 방법이 존재한다. <br>
 - FileOutStream 이용하기 <br>
 
+
 ``` java
 import java.io.FileWriter;
 import java.io.IOExeption;
@@ -45,6 +46,7 @@ public class FileWrite {
 
 - FileWriter 이용하기 <br>
 
+
 ``` java
 import java.io.FileWriter;
 import java.io.IOException;
@@ -64,6 +66,7 @@ public class FileWrite {
 
 
 - PrintWriter 이용하기 <br>
+
 
 ```java
 import java.io.PrintWriter;
@@ -91,6 +94,7 @@ public class FileWrite {
 이미 작성된 파일을 다시 **추가모드**로 열어 내용을 추가하는 방식이다. <br>
 
 - FileWriter 방식 <br>
+
 
 ``` java
 import java.io.FileWriter;
@@ -120,6 +124,7 @@ public class FileWrite {
   - 추가모드구분은 Boolean 타입이다. <br>
 
 - PrintWrite 방식 <br>
+
 
 ``` java
 import java.io.FileWriter;
@@ -158,6 +163,7 @@ public class FileWrite {
 
 - FileInputStram 방식 <br>
 
+
 ``` java
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -176,6 +182,7 @@ public class FileRead {
   - 이 방법은 정확한 길이를 모를 경우에는 불편한 방법이다. <br>
 
 - BufferedReader 방식 <br>
+
 
 ``` java
 import java.io.BufferedReader;
