@@ -41,8 +41,7 @@ public class FileWrite {
   }
 }
 ```
-- 위 방법은 Byte(바이트) 단위로 데이터를 처리하는 클래스이다. <br>
-
+- 위 방법은 Byte(바이트) 단위로 데이터를 처리하는 클래스이다. <br><br>
 
 - FileWriter 이용하기 <br>
 
@@ -62,8 +61,7 @@ public class FileWrite {
   }
 }
 ```
-- 위 방법은 Byte(바이트) 대신 문자열을 직접 파일에 쓸 수가 있다. <br>
-
+- 위 방법은 Byte(바이트) 대신 문자열을 직접 파일에 쓸 수가 있다. <br><br>
 
 - PrintWriter 이용하기 <br>
 
@@ -121,7 +119,7 @@ public class FileWrite {
 }
 ```
 - new FileWrite(파일명, 추가모드구분)
-  - 추가모드구분은 Boolean 타입이다. <br>
+  - 추가모드구분은 Boolean 타입이다. <br><br>
 
 - PrintWrite 방식 <br>
 
@@ -179,7 +177,7 @@ public class FileRead {
 }
 ```
 - 위 방법은 byte(바이트) 배열을 이용하여 파일을 읽는다.
-  - 이 방법은 정확한 길이를 모를 경우에는 불편한 방법이다. <br>
+  - 이 방법은 정확한 길이를 모를 경우에는 불편한 방법이다. <br><br>
 
 - BufferedReader 방식 <br>
 
