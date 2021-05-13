@@ -187,7 +187,7 @@ Ex) localhost:8080/add/addForm.html
 
 **data정보 ** <br><br>
 http://localhost:8080/add?x=1&y=2=result
-{: .notice--info}
+{: .notice--info}<br>
 
    * 브라우저에서 웹 서버로 정보를 전달하는 기본 Method(Default Method)
      * HTTP Method를 지정하지 않으면 GET Method를 호출한다.
