@@ -117,7 +117,7 @@ else {
 - HTML
 <br>
 
-```
+``` HTML5
 <!DOCTYPE html>
 <html>
 <head>
