@@ -79,46 +79,47 @@ last_modified_at: '2021-05-25 00:00:00 +0800'
   - 세션ID를 서버에서 클라이언트로 발급해 준다.
   - 서버에서 클라이언트로 발급해준 세션 ID를 쿠키를 사용해 저장한다.
   - 클라이언트는 다시 접속시, 이 쿠키 및 **localstorage**를 이용해서 세션 ID값을 전달한다.
-<br>
+<br><br>
 
 - Session의 장점
   - 각 클라이언트에게 고유 ID를 부여한다.
   - 세션 ID를 클라이언트를 구분해서 클라이언트의 요구에 맞는 서비스를 제공할 수 있다.
   - 사용해봤던 정보들을 서버에 저장하기에 보안성이 높다.
-<br>
+<br><br>
 
 - Session의 단점
   - 서버에 저장하기에 처리를 요구하는 부하와 저장 공간을 필요로 한다.
-<br>
+<br><br>
 
 - HTTP 세션 동작 순서
   - **client가** 서버로 접속을 시도
   - 서버는 접근한 클라이언트의 **request-header filed**인 쿠키를 확인해 클라이언트가 해당 **session-id**를 보내왔는지 확인한다.
   - 만약 클라이언트로부터 발송된 **session-id**가 없다면, 서버는 session-id를 생성해 클라이언트에게 response-head field인 set cookie 값으로 sesion-id 발행한다.
-<br>
+<br><br>
 
 - Session 사용시 주의사항
   - Session은 사용자가 같아도 웹 브라우저가 다르면 다른 사용자로 인식한다.
   - **같은 종류**의 웹 브라우저는 같은 사용자로 인식한다.
 <br><br>
+
 ### Session 구현
 
 - Session을 사용하기 위해 **HttpSession** 인터페이스를 사용한다.
   - 인터페이스 사용을 위한 ```import```를 한다.
   - ```import javax.servlet.http.HttpSession;```
-<br>
+<br><br>
 
 - HttpSession 객체를 사용을 위한 선언을 해준다.
   - ```HttpSession session = request.getSession();```
   - 요청 받은 데이터를 유지시켜야 하므로 **request**를 사용한다.
-<br>
+<br><br>
 
 - 상태유지를 위한 데이터 저장
   - ```session.setAttribute("key", value);```
   - **setAttibute**는 ("**key**", **value**)로 사용한다.
     - key : 저장한 데이터(value)의 열쇠
     - value : 저장해야 할 데이터 값
-<br>
+<br><br>
 
 - Session에 저장되어 있는 데이터 불러오기
   - ```session.getAttribute("key");```
