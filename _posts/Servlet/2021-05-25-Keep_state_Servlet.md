@@ -158,12 +158,11 @@ Cookie cookie = new Cookie("Key", String_value);
 // 클라이언트측으로 전송해 값을 저장
 response.addCookie(cookie);
 ```
-<br>
 
 - Cookie는 **key** 값과 **value** 값으로 저장한다.
 	- value 값은 문자(String)로만 저장이 가능하다.
 	- 저장해야 할 value가 문자(String)가 아니라면 ```String.valueOf()```를 이용하여 변환한다.
-<br>
+<br><br>
 
 - **Cookie 받아오기**
 	- Cookie를 받아오려면 ```request.getCookie()```라는 Method를 이용한다.
