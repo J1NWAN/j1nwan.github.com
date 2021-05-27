@@ -126,3 +126,99 @@ last_modified_at: '2021-05-25 00:00:00 +0800'
     - 저장한 데이터의 위치에 존재한 **key**를 사용하여 불러온다.
 
 <hr><br>
+
+## 쿠키
+
+- 쿠키는 **클라이언트**(웹 브라우저, 사용자 컴퓨터) 측에 저장되어 사용됩니다.
+- 쿠키의 **기본 생명주기는 브라우저가 닫히기 전** 까지입니다.
+	- 기간을 값을 설정하면 그 기간 동안 값을 설정합니다.
+<br>
+
+- 사용 범위
+	- 웹 브라우저 별 및 경로 범주 공간
+- 생명주기
+	- 웹 브라우저에 전달한 시간부터 종료 시간
+- 저장 위치
+	- 웹 브라우저의 메모리 또는 파일
+< BR > < BR >
+
+- 쿠키의 인터페이스를 사용하는 경우 import 해야한다.
+	- ```javax.servlet.http.Cookie```
+<br>
+
+### Cookie 저장하는 방법
+
+``` java 
+// 쿠키 객체를 생성하고 쿠키에 속성(저장할 데이터) 값을 설정
+Cookie cookie = new Cookie("Key", String_value);
+
+// 클라이언트측으로 전송해 값을 저장
+response.addCookie(cookie);
+```
+<br>
+
+- Cookie는 **key** 값과 **value** 값으로 저장한다.
+	- value 값은 문자(String)로만 저장이 가능하다.
+	- 저장해야 할 value가 문자(String)가 아니라면 ```String.valueOf()```를 이용하여 변환한다.
+<br>
+
+### Cookie 받아오기
+- Cookie를 받아오려면 ```request.getCookie()```라는 Method를 이용한다.
+	- Method 이름을 보면 예상가능하듯 **여러개의 Cookie**를 가져와야 하기 때문에 **배열로 얻는다**.
+	- 받아온 Cookie는 배열에 저장되어 있으므로 배열안에 원하는 Cookie를 찾기 위해 반복문으로 비교하며 가져온다.
+	- **Cookie[] 변수 = request.getCookies();**
+	-  Ex) ```Cookie[] cookies = request.getCookies();```
+<br>
+
+### Cookie 이름 얻기
+- **String 변수 = 받아온 변수.getCookies();**
+- Ex) ```String c = cookies.getName();```
+<br>
+
+### Cookie 값을 얻기
+- **String 변수 = 받아온 변수.getValue();**
+- Ex) ```String c = cookies.getValue();```
+<br>
+
+### Cookie 받아오기 부터 값을 얻기 까지의 정리
+- 모든 Cookie를 받아오기 때문에 **"배열"**로 받는다.
+- 수 많은 Cookie중 원하는 값을 얻기위해 **반복하여** 꺼내온 이름들을 **체크(비교)**하는 형태로 필요한 쿠키를 찾아야 한다.
+- Ex)
+``` java
+// 모든 쿠키를 배열로 받아온다. 
+Cookie[] cookies = request.getCookies(); 
+
+// 값을 저장할 변수 
+String c = ""; 
+
+// 배열에 값이 존재하는 경우 true 
+if(cookies != null) { 
+	// 반복 횟수는 cookies의 끝 까지 
+	for(Cookie cookie : cookies) { 
+		// 배열에서 받아온 이름(key)이 동일한 경우 true 
+		if(cookie.getName.equals("key1")) { 
+		// 이름(key)값에 저장되어 있는 데이터를 저장 
+			c = cookie.getValue(); 
+			}
+		}
+	} 
+// 위 주석과 동일 
+if(cookies != null) { 
+	for(Cookie cookie : cookies) { 
+		if(cookie.getName.equals("key2")) { 
+			c_ = cookie.getValue(); 
+		} 
+	} 
+}
+```
+<br><br>
+
+### Cookie의 생명 주기(Life Cycle)
+
+- Cookie의 생명 주기는 기본적으로 **클라이언트(웹 브라우저)가 닫히면 소멸**된다.
+- 생명 주기를 설정하면 **설정한 만큼 사용이 가능**하며, **초 단위로 설정**해야 한다.
+	- 생명 주기는 해당 **Cookie를 얻은 후 부터 설정한 값 까지**이며, 설정된 시간이 경과 되기 전까지 Cookie는 유지 된다.
+	- 사용 방법은 **받아온 변수.setMaxAge(초);**로 사용한다.
+	- Ex)  ```cookies.setMaxAge(86400);``` or ```cookies.setMaxAge(24 * 60 * 60);```
+
+<hr><br>
