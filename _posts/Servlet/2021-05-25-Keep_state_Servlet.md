@@ -146,7 +146,10 @@ last_modified_at: '2021-05-25 00:00:00 +0800'
 	- ```javax.servlet.http.Cookie```
 <br>
 
-### Cookie 저장하는 방법
+### Cookie 인터페이스 사용법
+
+- Cookie 저장하는 방법
+<br>
 
 ``` java 
 // 쿠키 객체를 생성하고 쿠키에 속성(저장할 데이터) 값을 설정
@@ -162,22 +165,22 @@ response.addCookie(cookie);
 	- 저장해야 할 value가 문자(String)가 아니라면 ```String.valueOf()```를 이용하여 변환한다.
 <br>
 
-### Cookie 받아오기
-- Cookie를 받아오려면 ```request.getCookie()```라는 Method를 이용한다.
+- Cookie 받아오기
+	- Cookie를 받아오려면 ```request.getCookie()```라는 Method를 이용한다.
 	- Method 이름을 보면 예상가능하듯 **여러개의 Cookie**를 가져와야 하기 때문에 **배열로 얻는다**.
 	- 받아온 Cookie는 배열에 저장되어 있으므로 배열안에 원하는 Cookie를 찾기 위해 반복문으로 비교하며 가져온다.
 	- **Cookie[] 변수 = request.getCookies();**
 	-  Ex) ```Cookie[] cookies = request.getCookies();```
 <br>
 
-### Cookie 이름 얻기
-- **String 변수 = 받아온 변수.getCookies();**
-- Ex) ```String c = cookies.getName();```
+- Cookie 이름 얻기
+	- **String 변수 = 받아온 변수.getCookies();**
+	- Ex) ```String c = cookies.getName();```
 <br>
 
-### Cookie 값을 얻기
-- **String 변수 = 받아온 변수.getValue();**
-- Ex) ```String c = cookies.getValue();```
+- Cookie 값을 얻기
+	- **String 변수 = 받아온 변수.getValue();**
+	- Ex) ```String c = cookies.getValue();```
 <br>
 
 ### Cookie 받아오기 부터 값을 얻기 까지의 정리
