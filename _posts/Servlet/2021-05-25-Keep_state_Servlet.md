@@ -184,6 +184,7 @@ response.addCookie(cookie);
 - 모든 Cookie를 받아오기 때문에 **"배열"**로 받는다.
 - 수 많은 Cookie중 원하는 값을 얻기위해 **반복하여** 꺼내온 이름들을 **체크(비교)**하는 형태로 필요한 쿠키를 찾아야 한다.
 - Ex)
+<br>
 ``` java
 // 모든 쿠키를 배열로 받아온다. 
 Cookie[] cookies = request.getCookies(); 
