@@ -16,7 +16,7 @@ article_tag2: JSP에서 동적인 코드를 호출하는 6가지 전략
 article_tag3: Action 태그와 JSP EL, Scriptlet 태그와 JSTL
 article_section: Java 언어를 기반으로 하는 Server Side 스크립트 언어에 대해 배운다.
 meta_keywords: Servlet, Application, Session, Cookie
-last_modified_at: '2021-05-25 00:00:00 +0800'
+last_modified_at: '2021-06-03 23:00:00 +0800'
 ---
 
 # JSP(Java Server Pages)란
