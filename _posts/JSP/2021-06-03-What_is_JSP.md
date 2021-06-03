@@ -84,7 +84,9 @@ last_modified_at: '2021-06-03 23:00:00 +0800'
 <hr><br>
 
 # JSP 문법
-<br>
+
+> JSP에는 기본적으로 코드블록이라는 기능이 있다.
+<br><br>
 
 ### JSP Expression
 
