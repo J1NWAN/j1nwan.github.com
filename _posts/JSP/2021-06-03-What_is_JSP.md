@@ -88,7 +88,7 @@ last_modified_at: '2021-06-03 23:00:00 +0800'
 > JSP에는 기본적으로 코드블록이라는 기능이 있다.
 <br><br>
 
-### JSP Expression
+## JSP Expression
 
 ```<%= expression %>```
 <br>
@@ -102,7 +102,7 @@ last_modified_at: '2021-06-03 23:00:00 +0800'
 
 <br>
 
-### JSP Scriptlet
+## JSP Scriptlet
 
 ```<% code fragment %>```
 <br>
@@ -116,7 +116,7 @@ last_modified_at: '2021-06-03 23:00:00 +0800'
 
 <br>
 
-### JSP Declaration
+## JSP Declaration
 
 ```<%! declaration %>```
 <br>
@@ -129,7 +129,7 @@ last_modified_at: '2021-06-03 23:00:00 +0800'
 
 <br>
 
-### JSP Comment
+## JSP Comment
 
 ```<%-- comments --%>```
 <br>
@@ -137,7 +137,7 @@ last_modified_at: '2021-06-03 23:00:00 +0800'
 - 주석의 개념
 <br>
 
-### JSP Directive
+## JSP Directive
 
 ```<%@ directive %>```
 <br>
@@ -164,7 +164,7 @@ last_modified_at: '2021-06-03 23:00:00 +0800'
    - tag library는 사용자가 정의한 동작을 구현한 사용자 정의(user-defined)태그 집합이다.
 <br>
 
-### JSP Action
+## JSP Action
 
 - JSP Action XML 구문 안의 구조들을 사용하여 WAS의 동작을 제어한다.
 1. ```<jsp:forward>``` action
