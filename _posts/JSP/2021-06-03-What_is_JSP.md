@@ -86,13 +86,11 @@ last_modified_at: '2021-06-03 23:00:00 +0800'
 # JSP 문법
 
 > JSP에는 기본적으로 코드블록이라는 기능이 있다.
-<br><br>
+<br>
 
 ## JSP Expression
 
-```<%= expression %>```
-<br>
-
+- ```<%= expression %>```
 - JSP Expression elements는 **String으로 변환되어** Servlet의 출력에 삽입된다.
 - 동적인 페이지를 생성한다.
 - 끝에 세미콜론(;)을 붙이지 않는다.
@@ -104,9 +102,7 @@ last_modified_at: '2021-06-03 23:00:00 +0800'
 
 ## JSP Scriptlet
 
-```<% code fragment %>```
-<br>
-
+- ```<% code fragment %>```
 - 간단한 값이 아닌 조금 더 복잡한 것을 수행하고자 할 때 JSP Scriptlet을 사용한다.
 - 임의의 Java 코드를 삽일할 수 있다.
 - JSP Scriptlet Tag는 메서드가 아닌 변수만 선언할 수 있다.
@@ -118,9 +114,7 @@ last_modified_at: '2021-06-03 23:00:00 +0800'
 
 ## JSP Declaration
 
-```<%! declaration %>```
-<br>
-
+- ```<%! declaration %>```
 - JSP Declaration을 사용하면 Servlet 클래스에 삽입되는 메서드나 필드를 정의할 수 있다.
 - JSP Scriptlet Tag와 달리 JSP Declaration Tag는 메서드와 변수 모두 선언할 수 있다.
 <br>
@@ -131,17 +125,13 @@ last_modified_at: '2021-06-03 23:00:00 +0800'
 
 ## JSP Comment
 
-```<%-- comments --%>```
-<br>
-
+- ```<%-- comments --%>```
 - 주석의 개념
 <br>
 
 ## JSP Directive
 
-```<%@ directive %>```
-<br>
-
+- ```<%@ directive %>```
 - JSP 페이지의 전체적인 구조에 영향을 미친다.
 - 전체 구조에 대해 WAS에 지시를 내린다.
 - 지시어에 들어가는 것: **page**, **include**, **taglib**
