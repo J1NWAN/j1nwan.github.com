@@ -27,20 +27,28 @@ last_modified_at: '2021-05-25 00:00:00 +0800'
 - HTML 코드에 Java 코드를 넣어 동적인 웹 페이지를 생성하는 웹 어플리케이션 도구
   - JSP를 통해 정적인 HTML과 동적으로 생성된 Contents(HTTP 요청 파라미터)를 혼합하여 사용할 수 있다.
   - 즉, 사용자가 입력한 Contents에 맞게 동적인 웹 페이지를 생성한다.
-  - **이미지 추가**
+<br>
+
+![jsp-example](https://user-images.githubusercontent.com/61576254/120657832-d2d67600-c4bf-11eb-9a88-6223b146c708.png)
+
 <br>
 
 - Servlet 기술의 확장
   - Servlet을 보완한 스크립트 방식 표준
   - Servlet의 모든 기능 + 추가적인 기능
-  - **이미지 추가**
+<br>
+
+![jsp-definition](https://user-images.githubusercontent.com/61576254/120657933-f13c7180-c4bf-11eb-8686-29df22e2e954.png)
+
 <br>
 
 ### JSP의 내부적인 동작 과정
 
 > JSP 문서는 백 그라운드에서 Servlet으로 자동으로 변환된다.
 
-**이미지 추가**
+![jsp-process](https://user-images.githubusercontent.com/61576254/120658130-1f21b600-c4c0-11eb-8f41-e93ec28a71fc.png)
+
+<br>
 
 1. JSP가 실행되면 WAS는 내부적으로 JSP 파일을 Java Servlet(.java)으로 변환한다.
 2. WAS는 이 변환한 Servlet을 동작하여 필요한 기능을 수행한다.
@@ -84,7 +92,10 @@ last_modified_at: '2021-05-25 00:00:00 +0800'
 - JSP Expression elements는 **String으로 변환되어** Servlet의 출력에 삽입된다.
 - 동적인 페이지를 생성한다.
 - 끝에 세미콜론(;)을 붙이지 않는다.
-- **이미지 추가**
+<br>
+
+![jsp-expression-example](https://user-images.githubusercontent.com/61576254/120658185-2e086880-c4c0-11eb-94ef-0364f50a2475.png)
+
 <br>
 
 ### 2. JSP Scriptlet
@@ -95,7 +106,10 @@ last_modified_at: '2021-05-25 00:00:00 +0800'
 - 간단한 값이 아닌 조금 더 복잡한 것을 수행하고자 할 때 JSP Scriptlet을 사용한다.
 - 임의의 Java 코드를 삽일할 수 있다.
 - JSP Scriptlet Tag는 메서드가 아닌 변수만 선언할 수 있다.
-- **이미지 추가**
+<br>
+
+![jsp-scriptlet-example](https://user-images.githubusercontent.com/61576254/120658315-47111980-c4c0-11eb-8404-b7aeb9fc907b.png)
+
 <br>
 
 ### 3. JSP Declaration
@@ -105,7 +119,10 @@ last_modified_at: '2021-05-25 00:00:00 +0800'
 
 - JSP Declaration을 사용하면 Servlet 클래스에 삽입되는 메서드나 필드를 정의할 수 있다.
 - JSP Scriptlet Tag와 달리 JSP Declaration Tag는 메서드와 변수 모두 선언할 수 있다.
-- **이미지 추가**
+<br>
+
+![jsp-declaration-example](https://user-images.githubusercontent.com/61576254/120658637-90616900-c4c0-11eb-83f7-e26d3ec14c56.png)
+
 <br>
 
 ### 4. JSP Comment
@@ -124,8 +141,12 @@ last_modified_at: '2021-05-25 00:00:00 +0800'
 - JSP 페이지의 전체적인 구조에 영향을 미친다.
 - 전체 구조에 대해 WAS에 지시를 내린다.
 - 지시어에 들어가는 것: **page**, **include**, **taglib**
-- **이미지 추가**
 <br>
+
+![jsp-directive-example](https://user-images.githubusercontent.com/61576254/120658376-585a2600-c4c0-11eb-9c8f-18683bf0494f.png)
+
+<br>
+
 1. page
    - ```<%@ page attribute = "value" %>```
    - page 지시어는 Container에 명령을 제공하는데 사용된다.
@@ -160,7 +181,9 @@ last_modified_at: '2021-05-25 00:00:00 +0800'
   - JavaBeans 구성 요소를 재사용하고
   - 사용자를 다른 페이지로 전달(forward)할 수 있다.
 - 예시
-  - **이미지 추가**
+<br>
+
+  ![jsp-action-example](https://user-images.githubusercontent.com/61576254/120658439-67d96f00-c4c0-11eb-8c58-8008fbbe6de3.png)
   - 구체적인 예시는 www.javapoint.com 참고
 <hr><br>
 
