@@ -81,10 +81,10 @@ last_modified_at: '2021-06-03 23:00:00 +0800'
   - out: the PrintWriter Object
   - application: the ServletContext Object
 - 구체적인 내용은 www.javatpoint.com 참고
-<hr>
+<hr><br>
 
 # JSP 문법
-
+<br>
 
 ### JSP Expression
 
