@@ -42,7 +42,7 @@ last_modified_at: '2021-06-03 23:00:00 +0800'
 
 <br>
 
-### JSP의 내부적인 동작 과정
+## JSP의 내부적인 동작 과정
 
 > JSP 문서는 백 그라운드에서 Servlet으로 자동으로 변환된다.
 
@@ -61,7 +61,7 @@ last_modified_at: '2021-06-03 23:00:00 +0800'
 3. 수행 완료 후 생성된 데이터를 웹 페이지와 함께 클라이언트로 응답한다.
 <br><br>
 
-### JSP의 특징
+## JSP의 특징
 
 - 스크립트 언어이기 때문에 자바 기능을 그대로 사용할 수 있다.
 - Tomcat(WAS)이 이미 만들어놓은 객체(predefined values)를 사용한다.
@@ -72,7 +72,7 @@ last_modified_at: '2021-06-03 23:00:00 +0800'
 - Servlet과 다르게 JSP는 수정된 경우 재배포할 필요 없이 Tomcat(WAS)이 알아서 처리해준다.
 <br><br>
 
-#### 참고1 Predefined Values(또는 Implicit Object)
+### 참고1 Predefined Values(또는 Implicit Object)
 
 - 미리 정의된 객체로, WAS가 제공하는 객체를 의미한다.
   - request: the HttpServletRequest Object
@@ -86,7 +86,7 @@ last_modified_at: '2021-06-03 23:00:00 +0800'
 # JSP 문법
 
 > JSP에는 기본적으로 코드블록이라는 기능이 있다.
-<br>
+
 
 ## JSP Expression
 
