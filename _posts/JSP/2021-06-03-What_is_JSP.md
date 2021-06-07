@@ -222,7 +222,7 @@ last_modified_at: '2021-06-03 23:00:00 +0800'
 
 # JSP Action 태그와 JSP EL(Expression Language)
 
-```객체 Bean에 접근하는 방법```
+```객체 Bean에 접근하는 방법```<br>
 
 1. JSP Action 태그
    - 위의 JSP 문법 참고
@@ -231,10 +231,12 @@ last_modified_at: '2021-06-03 23:00:00 +0800'
    - EL을 사용하면 Java Beans 구성 요소에 저장된 응용 프로그램 데이터에 쉽게 접근할 수 있다.
      - 객체 접근 ```${ObjectName}```
      - property에 접근: ```${ObjectName.property}```
+
 <br>
 
 **예시** <br>
 - JSP Action 태그 이용
+
 
 ``` Java
 <%-- JSP 1.2(old) --%>
@@ -248,9 +250,11 @@ last_modified_at: '2021-06-03 23:00:00 +0800'
   <li>ID: <jsp:getProperty name="customer" property="id" /></li>
 </ul>   
 ```
-<br>
+
+<hr><br>
 
 - JSP EL(Expression Language) 이용
+
 
 ``` Java
 <%-- JSP 2.0(Preferred)  --%>
@@ -260,11 +264,12 @@ last_modified_at: '2021-06-03 23:00:00 +0800'
   <li>ID: ${customer.id}</li>
 </ul> 
 ```
+
 <hr><br>
 
 # JSP Scriptlet 태그와 JSTL(JSP Standard Tah Library)
 
-```복잡한 것을 수행하는 임의의 Java Code를 삽입하는 방법```
+```복잡한 것을 수행하는 임의의 Java Code를 삽입하는 방법```<br>
 
 1. JSP Scriptlet 태그
    - 위의 JSP 문법 참고
