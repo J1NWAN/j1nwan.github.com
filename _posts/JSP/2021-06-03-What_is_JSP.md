@@ -188,6 +188,7 @@ last_modified_at: '2021-06-03 23:00:00 +0800'
   - 구체적인 예시는 www.javapoint.com 참고
 <hr><br>
 
+
 # JSP에서 동적인 코드를 호출하는 6가지 전략
 
 
@@ -219,7 +220,8 @@ last_modified_at: '2021-06-03 23:00:00 +0800'
 - Use custom tags
    - tag handler class를 만든다.
    - XML과 같은 사용자 정의 태그(custom tags)를 사용하여 태그 핸들러를 호출한다.
-<hr>
+<hr><br>
+
 
 # JSP Action 태그와 JSP EL(Expression Language)
 
@@ -239,7 +241,7 @@ last_modified_at: '2021-06-03 23:00:00 +0800'
 - JSP Action 태그 이용
 
 
-``` HTML
+``` java
 <%-- JSP 1.2(old) --%>
 <%-- JSP 1.2(old) --%>
 <jsp:useBean id="customer" type="beans.Customer" scope="request"> 
@@ -255,7 +257,7 @@ last_modified_at: '2021-06-03 23:00:00 +0800'
 - JSP EL(Expression Language) 이용
 
 
-``` HTML
+``` java
 <%-- JSP 2.0(Preferred)  --%>
 <ul>
   <li>Name: ${customer.name}</li>
@@ -291,7 +293,7 @@ last_modified_at: '2021-06-03 23:00:00 +0800'
        - Prefix를 설정하여 여러 개의 tag library를 식별한다.
          - 즉, 어떤 라이브러리를 사용하는지 알 수 있다.
 
-``` HTML
+``` java
 <%@ taglib uri=http://java.sun.com/jsp/jstl/core prefix="c" %> 
 
 <c:out value="Hello World"> </c:out>
@@ -301,7 +303,7 @@ last_modified_at: '2021-06-03 23:00:00 +0800'
 **예시**
 - JSP Scriptlet 태그 이용
 
-``` HTML
+``` java
 <html>
 <head>
 <title>Count to 10 in JSP scriptlet</title>
@@ -320,7 +322,7 @@ last_modified_at: '2021-06-03 23:00:00 +0800'
 
 - JSTL(JSP Standard Tag Library)이용
 
-``` HTML
+``` java
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <html>
 <head>
