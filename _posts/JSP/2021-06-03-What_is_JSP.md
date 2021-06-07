@@ -42,7 +42,7 @@ last_modified_at: '2021-06-03 23:00:00 +0800'
 
 <br>
 
-### JSP의 내부적인 동작 과정
+## JSP의 내부적인 동작 과정
 
 > JSP 문서는 백 그라운드에서 Servlet으로 자동으로 변환된다.
 
@@ -61,7 +61,7 @@ last_modified_at: '2021-06-03 23:00:00 +0800'
 3. 수행 완료 후 생성된 데이터를 웹 페이지와 함께 클라이언트로 응답한다.
 <br><br>
 
-### JSP의 특징
+## JSP의 특징
 
 - 스크립트 언어이기 때문에 자바 기능을 그대로 사용할 수 있다.
 - Tomcat(WAS)이 이미 만들어놓은 객체(predefined values)를 사용한다.
@@ -85,7 +85,7 @@ last_modified_at: '2021-06-03 23:00:00 +0800'
 
 # JSP 문법
 
-### JSP Expression
+## JSP Expression
 
 ```<%= expression %>```
 <br>
@@ -99,7 +99,7 @@ last_modified_at: '2021-06-03 23:00:00 +0800'
 
 <br>
 
-### JSP Scriptlet
+## JSP Scriptlet
 
 ```<% code fragment %>```
 <br>
@@ -113,7 +113,7 @@ last_modified_at: '2021-06-03 23:00:00 +0800'
 
 <br>
 
-### JSP Declaration
+## JSP Declaration
 
 ```<%! declaration %>```
 <br>
@@ -126,7 +126,7 @@ last_modified_at: '2021-06-03 23:00:00 +0800'
 
 <br>
 
-### JSP Comment
+## JSP Comment
 
 ```<%-- comments --%>```
 <br>
@@ -134,7 +134,7 @@ last_modified_at: '2021-06-03 23:00:00 +0800'
 - 주석의 개념
 <br>
 
-### JSP Directive
+## JSP Directive
 
 ```<%@ directive %>```
 <br>
@@ -161,7 +161,7 @@ last_modified_at: '2021-06-03 23:00:00 +0800'
    - tag library는 사용자가 정의한 동작을 구현한 사용자 정의(user-defined)태그 집합이다.
 <br>
 
-### JSP Action
+## JSP Action
 
 - JSP Action XML 구문 안의 구조들을 사용하여 WAS의 동작을 제어한다.
 1. ```<jsp:forward>``` action
