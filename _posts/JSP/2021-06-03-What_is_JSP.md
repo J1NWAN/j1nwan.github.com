@@ -16,7 +16,7 @@ article_tag2: JSP에서 동적인 코드를 호출하는 6가지 전략
 article_tag3: Action 태그와 JSP EL, Scriptlet 태그와 JSTL
 article_section: Java 언어를 기반으로 하는 Server Side 스크립트 언어에 대해 배운다.
 meta_keywords: Servlet, Application, Session, Cookie
-last_modified_at: '2021-05-25 00:00:00 +0800'
+last_modified_at: '2021-06-03 23:00:00 +0800'
 ---
 
 # JSP(Java Server Pages)란
@@ -84,6 +84,7 @@ last_modified_at: '2021-05-25 00:00:00 +0800'
 <hr>
 
 # JSP 문법
+
 ### 1. JSP Expression
 
 ```<%= expression %>```
@@ -187,5 +188,148 @@ last_modified_at: '2021-05-25 00:00:00 +0800'
   - 구체적인 예시는 www.javapoint.com 참고
 <hr><br>
 
-> 주기적으로 추가할 예정
+# JSP에서 동적인 코드를 호출하는 6가지 전략
+
+1. Call Java code Directly
+   - Java 코드를 직접 호출
+   - 모든 Java 코드를 JSP 페이지에 넣는다.
+   - 아주 적은 양의 코드에만 적합한 전략
+2. Call Java code indirectly
+   - Java 코드를 간접적으로 호출
+   - 별도의 utility class(Java Class)를 작성한다.
+   - utility class를 호출하는 데 필요한 Java 코드만 JSP 페이지에 넣는다.
+3. Use beans
+   - beans로 구조화된 별도의 utility class(Java Class)를 작성한다.
+   - ```jsp:useBean```, ```jsp:getProperty```, ```jsp:setProperty```를 사용하여 utility class를 호출한다.
+4. Use the MVC architecture
+   - MVC 아키텍처를 사용
+   - Servlet(Controller)이 요청에 응답하고 적절한 데이터를 검색하여 결과를 beans(Model)에 저장한다.
+   - 이 결과를 JSP 페이지(View)로 전달하여 결과를 표시한다.
+   - 즉, JSP 페이지는 bean을 사용한다.
+<br>
+
+![simple-mvc-architecture](https://user-images.githubusercontent.com/61576254/121027703-24de0b00-c7e2-11eb-922b-f6ab89d91630.png)
+
+
+5. Use the JSP expression language
+   - shorthand syntax를 이용하여 간단하게 객체 속성(property)에 접근하고 출력한다.
+   - 즉, **jsp:useBean**, **jsp:getProperty**, **jsp:setProperty**를 expression language으로 간단하게 표현할 수 있다.
+   - 일반적으로 beans, MVC패턴을 함께 사용한다.
+6. Use custom tags
+   - tag handler class를 만든다.
+   - XML과 같은 사용자 정의 태그(custom tags)를 사용하여 태그 핸들러를 호출한다.
+<hr><br>
+
+# JSP Action 태그와 JSP EL(Expression Language)
+
+```객체 Bean에 접근하는 방법```
+
+1. JSP Action 태그
+   - 위의 JSP 문법 참고
+2. JSP EL(Expression Language)
+   - JSP 2.0의 주요 구성 요소 중 하나
+   - EL을 사용하면 Java Beans 구성 요소에 저장된 응용 프로그램 데이터에 쉽게 접근할 수 있다.
+     - 객체 접근 ```${ObjectName}```
+     - property에 접근: ```${ObjectName.property}```
+<br>
+
+**예시** <br>
+- JSP Action 태그 이용
+
+``` Java
+<%-- JSP 1.2(old) --%>
+<%-- JSP 1.2(old) --%>
+<jsp:useBean id="customer" type="beans.Customer" scope="request"> 
+</jsp:useBean>
+
+<ul>
+  <li>Name: <jsp:getProperty name="customer" property="name" /></li>
+  <li>Email: <jsp:getProperty name="customer" property="email" /></li>  
+  <li>ID: <jsp:getProperty name="customer" property="id" /></li>
+</ul>   
+```
+<br>
+
+- JSP EL(Expression Language) 이용
+
+``` Java
+<%-- JSP 2.0(Preferred)  --%>
+<ul>
+  <li>Name: ${customer.name}</li>
+  <li>Email: ${customer.email}</li>  
+  <li>ID: ${customer.id}</li>
+</ul> 
+```
+<hr><br>
+
+# JSP Scriptlet 태그와 JSTL(JSP Standard Tah Library)
+
+```복잡한 것을 수행하는 임의의 Java Code를 삽입하는 방법```
+
+1. JSP Scriptlet 태그
+   - 위의 JSP 문법 참고
+2. JSTL(JSP Standard Tag Library)
+   - 많은 JSP 애플리케이션의 공통적인 핵심 기능을 캡슐화하는 유용한 JSP 태그 모음(**JSP 표준 태그 라이브러리**)
+     - 즉, JSP 페이지를 작성할 때 유용하게 사용할 수 있는 여러 가지 action과 함수가 포함된 라이브러리
+     - **가장 많이 사용하는 태그 황장 라이브러리**
+     - 자신만의 Custom Tag를 추가할 수 있는 기능을 제공한다.
+   - 사용하는 이유?
+     - JSP에 Java Code가 들어가는 것을 막기 위해서 사용한다.
+     - 즉, Java Code(JSP Scriptlet)대신 Tag를 사용하여 프로그래밍할 수 있도록 하기 위해 도입되었다.
+   - JSTL 태그의 분류
+     - **Core**
+     - **Formatting tags**
+     - **SQL tags**
+     - **XML tags**
+     - **JSTL Functions**
+     - **taglib 지시어**를 사용하여 JSP 페이지가 Custom 태그 집합을 사용한다고 선언한다.
+       - Java Code 대신 Custom Tag를 사용한다.
+       - Prefix를 설정하여 여러 개의 tag library를 식별한다.
+         - 즉, 어떤 라이브러리를 사용하는지 알 수 있다.
+
+``` java
+<%@ taglib uri=http://java.sun.com/jsp/jstl/core prefix="c" %> 
+
+<c:out value="Hello World"> </c:out>
+<!-- Similar to the way <%= "Hello World" %> works -->
+```
+
+**예시**
+- JSP Scriptlet 태그 이용
+
+``` java
+<html>
+<head>
+<title>Count to 10 in JSP scriptlet</title>
+</head>
+<body>
+   <%
+      for(int i=1;i<=10;i++){
+   %>
+   <%=i%><br/>
+   <%
+      }
+   %>
+</body>
+</html>
+```
+
+- JSTL(JSP Standard Tag Library)이용
+
+``` java
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<html>
+<head>
+<title>Count to 10 Example (using JSTL)</title>
+</head>
+<body>
+   <c:forEach var="i" begin="1" end="10" step="1">
+      <c:out value="${i}"/>
+      <br/>
+   </c:forEach>
+</body>
+</html>
+```
+<hr><br>
+
 > 출처: https://gmlwjd9405.github.io/2018/11/03/jsp.html
