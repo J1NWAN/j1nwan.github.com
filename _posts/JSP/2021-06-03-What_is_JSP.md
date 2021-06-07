@@ -72,7 +72,7 @@ last_modified_at: '2021-06-03 23:00:00 +0800'
 - Servlet과 다르게 JSP는 수정된 경우 재배포할 필요 없이 Tomcat(WAS)이 알아서 처리해준다.
 <br><br>
 
-#### 참고1 Predefined Values(또는 Implicit Object)
+### 참고1 Predefined Values(또는 Implicit Object)
 
 - 미리 정의된 객체로, WAS가 제공하는 객체를 의미한다.
   - request: the HttpServletRequest Object
@@ -188,9 +188,7 @@ last_modified_at: '2021-06-03 23:00:00 +0800'
   - 구체적인 예시는 www.javapoint.com 참고
 <hr><br>
 
-
 # JSP에서 동적인 코드를 호출하는 6가지 전략
-
 
 - Call Java code Directly
   - Java 코드를 직접 호출
