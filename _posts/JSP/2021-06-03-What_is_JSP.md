@@ -155,7 +155,7 @@ last_modified_at: '2021-06-03 23:00:00 +0800'
    - ```<%@ include file = "relative_url" %>```
    - include 지시어는 변환 단계에서 다른 외부 파일의 내용을 현재 JSP에 병합하도록 Container에 지시한다.
 3. taglib
-   - ```<%@ taglib uri = "uri" prefix = "prefixOfTag" %>
+   - ```<%@ taglib uri = "uri" prefix = "prefixOfTag" %>```
    - JSP API를 사용하면 HTML 또는 XML 태그처럼 보이는 사용자 정의 태그(custom tags)를 정의할 수 있다.
      - JSTL(JSP Standard Tag Library, JSP 표준 태그 라이브러리)사용
    - tag library는 사용자가 정의한 동작을 구현한 사용자 정의(user-defined)태그 집합이다.
@@ -164,17 +164,19 @@ last_modified_at: '2021-06-03 23:00:00 +0800'
 ## JSP Action
 
 - JSP Action XML 구문 안의 구조들을 사용하여 WAS의 동작을 제어한다.
+
+
 1. ```<jsp:forward>``` action
-   - 다른 리소스(JSP, html 또는 Servlet과 같은 정적 페이지)로 요청을 전달하는데 사용한다.
-2. ```<jsp:include>``` action
-   - 현재 JSP 페이지에 다른 리소스를 포함시키는데 사용한다.
-3. ```<jsp:useBean>``` action
-   - 해당하는 Bean(자바 객체)이 이미 존재하는지 확인한다.
-   - 객체가 없으면 지정된 객체를 생성한다.
-4. ```<jsp:setProperty>``` action
-   - Bean(자바 객체)의 속성을 설정한다.
-5. ```<jsp:getProperty>``` action
-   - 주어진 속성값을 가져오는데 사용되며 이를 문자열로 변환하고 동적인 웹 페이지를 생성하는데 해당 내용을 사용할 수 있다.
+  - 다른 리소스(JSP, html 또는 Servlet과 같은 정적 페이지)로 요청을 전달하는데 사용한다.
+3. ```<jsp:include>``` action
+  - 현재 JSP 페이지에 다른 리소스를 포함시키는데 사용한다.
+4. ```<jsp:useBean>``` action
+  - 해당하는 Bean(자바 객체)이 이미 존재하는지 확인한다.
+  - 객체가 없으면 지정된 객체를 생성한다.
+5. ```<jsp:setProperty>``` action
+  - Bean(자바 객체)의 속성을 설정한다.
+6. ```<jsp:getProperty>``` action
+  - 주어진 속성값을 가져오는데 사용되며 이를 문자열로 변환하고 동적인 웹 페이지를 생성하는데 해당 내용을 사용할 수 있다.
 <br>
 
 - 용도
